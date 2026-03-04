@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A113 - Booking App</title>
+    <script>
+        // Get the redirect URL from the current location
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+            history.replaceState(null, null, redirect);
+        }
+    </script>
+</head>
+<body>
+    <!-- Save the redirect in sessionStorage and go to index.html -->
+    <script>
+        sessionStorage.redirect = location.href;
+        location.href = '/А113/';
+    </script>
+</body>
+</html>
